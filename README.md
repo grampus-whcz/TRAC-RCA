@@ -89,11 +89,15 @@ You can also generate log file like those in experiments folder, and use two scr
 
 ## 4.some tips
 
-### 方法1：快速加载pkl
-python -c "import pickle; data=pickle.load(open('index.pkl','rb')); print(f'记录数：{len(data)}')"
+### Method 1: Quickly load pkl
+```bash
+python -c "import pickle; data=pickle.load(open('index.pkl','rb')); print(f'Number of records: {len(data)}')"
+```
 
-### 方法2：快速加载faiss索引
-python -c "import faiss; idx=faiss.read_index('index.faiss'); print(f'记录数：{idx.ntotal}')"
+### Method 2: Quickly load faiss index
+```bash
+python -c "import faiss; idx=faiss.read_index('index.faiss'); print(f'Number of records: {idx.ntotal}')"
+```
 
 ## 5.copy framework
 1. cp -r /root/shared-nvme/work/agent/OpenRCA XXX
