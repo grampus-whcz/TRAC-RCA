@@ -6,7 +6,7 @@ api_config.yaml
 # faiss_index_postmortem/
 faiss_index_postmortem_old_25.12/
 # faiss_index_postmortem_public/
-faiss_index_postmortem_private/
+# faiss_index_postmortem_private/
 rca/baseline/rag_agent/
 RAG/
 *.log
