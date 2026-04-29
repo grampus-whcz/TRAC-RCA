@@ -8,7 +8,7 @@
 
 TRAC-RCA is a tool-augmented framework for microservice RCA via temporal anomaly clustering and RAG. The RAG corpora comprise an open and a private corpus. The text chunks for the open corpus are derived from public incident tickets of multiple cloud service status dashboards, and those for the private corpus are based on multimodal anomaly data from the downtime of a private microservices system with missing incident reports. When TRAC-RCA meets a failure RCA query, it first uses anomaly detection tools to collect per-timestamp, per-feature anomaly scores across multiple entities, and employs clustering tools to obtain multiple anomaly clusters in the query time window. For each cluster, TRAC-RCA leverages a RAG system to augment the prompt with relevant historical postmortems. This process facilitates an LLM-enhanced RCA, after which all cluster outcomes are ranked to identify the final root cause.
 
-<img src="./.asset/framework.png"/> 
+<img src="./.asset/framework.png"/>
 
 ## 1.Quick Start
 
@@ -17,6 +17,7 @@ TRAC-RCA is a tool-augmented framework for microservice RCA via temporal anomaly
 ## 2.Installation
 
 TRAC-RCA requires **Python >= 3.10**. It can be installed by running the following command:
+
 ```bash
 # [optional to create conda environment]
 # conda create -n openrca python=3.10
@@ -43,7 +44,7 @@ The directory structure of the data is:
 │       │   ├── log
 │       │   ├── metric
 │       │   └── trace
-│       └── ... 
+│       └── ...
 └── ...
 ```
 
@@ -59,16 +60,17 @@ cd OmniTransfer
 # following the readme.md to install
 pip install -r requirements.txt
 ```
-Note: path used in ClusTopoRCA with OmniTransfer needs to be reconfigured. 
+
+Note: path used in ClusTopoRCA with OmniTransfer needs to be reconfigured.
 
 ## 3.Reproduction
 
 To reproduce results in the paper, please first setup your API configurations before running OpenRCA's baselines. Taking OpenAI as an example, you can configure `rca/api_config.yaml` file as follows:
 
 ```yaml
-SOURCE:   "AI"
-MODEL:    "gpt-4o"
-API_KEY:  "sk-xxxxxxxxxxxxxx"
+SOURCE: "AI"
+MODEL: "gpt-4o"
+API_KEY: "sk-xxxxxxxxxxxxxx"
 ```
 
 Then, run the following commands for result reproduction:
@@ -90,15 +92,23 @@ You can also generate log file like those in experiments folder, and use two scr
 ## 4.some tips
 
 ### Method 1: Quickly load pkl
+
 ```bash
 python -c "import pickle; data=pickle.load(open('index.pkl','rb')); print(f'Number of records: {len(data)}')"
 ```
 
 ### Method 2: Quickly load faiss index
+
 ```bash
 python -c "import faiss; idx=faiss.read_index('index.faiss'); print(f'Number of records: {idx.ntotal}')"
 ```
 
 ## 5.copy framework
+
 1. cp -r /root/shared-nvme/work/agent/OpenRCA XXX
-2. replace "OmniTransfer_new" with a "OmniTransfer_new?", exclude files like "*.md, *.log, *.txt, *.json, *.ipynb"
+2. replace "OmniTransfer_new" with a "OmniTransfer_new?", exclude files like "_.md, _.log, _.txt, _.json, \*.ipynb"
+
+## 6.Omnitransfer
+
+We have released a runnable version of OmniTransfer in our environment for researchers to download and use.
+The repository link is https://github.com/grampus-whcz/OmniTransfer.
