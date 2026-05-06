@@ -93,9 +93,7 @@ You can also generate log file like those in experiments folder, and use two scr
 
 ### Processed Postmortem Data (JSON format)
 
-The processed JSON files for both public and private postmortems have been uploaded to the /jsonl directory within the repository. Specifically:
-
-> Public postmortems (processed by LLM) and Private postmortems (processed by LLM) are both available at: https://github.com/grampus-whcz/TRAC-RCA/tree/main/jsonl
+The processed JSON files for both public and private postmortems have been uploaded to the /jsonl directory within the repository.
 
 ### Faiss Indices
 
