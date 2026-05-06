@@ -103,26 +103,7 @@ The knowledge base indices for the hybrid library, public library, and private l
 
 > Hybrid library index is in /faiss_index_postmortem; Public library index is in /faiss_index_postmortem_public; and Private library indexis in /faiss_index_postmortem_private.
 
-## 5.some tips
-
-### Method 1: Quickly load pkl
-
-```bash
-python -c "import pickle; data=pickle.load(open('index.pkl','rb')); print(f'Number of records: {len(data)}')"
-```
-
-### Method 2: Quickly load faiss index
-
-```bash
-python -c "import faiss; idx=faiss.read_index('index.faiss'); print(f'Number of records: {idx.ntotal}')"
-```
-
-## 6.copy framework
-
-1. cp -r /root/shared-nvme/work/agent/OpenRCA XXX
-2. replace "OmniTransfer*new" with a "OmniTransfer_new?", exclude files like "*.md, _.log, _.txt, \_.json, \*.ipynb"
-
-## 7.Omnitransfer
+## 5.Omnitransfer
 
 We have released a runnable version of OmniTransfer in our environment for researchers to download and use.
 The repository link is https://github.com/grampus-whcz/OmniTransfer.
