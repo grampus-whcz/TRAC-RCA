@@ -101,7 +101,7 @@ The processed JSON files for both public and private postmortems have been uploa
 
 The knowledge base indices for the hybrid library, public library, and private library have been uploaded to the repository:
 
-> Hybrid library index is in ./faiss_index_postmortem; Public library index is in ./faiss_index_postmortem_public; and Private library indexis in ./faiss_index_postmortem_private.
+> Hybrid library index is in /faiss_index_postmortem; Public library index is in /faiss_index_postmortem_public; and Private library indexis in /faiss_index_postmortem_private.
 
 ## 5.some tips
 
