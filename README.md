@@ -95,16 +95,13 @@ You can also generate log file like those in experiments folder, and use two scr
 
 The processed JSON files for both public and private postmortems have been uploaded to the /jsonl directory within the repository. Specifically:
 
-> Public postmortems (processed by LLM) are available at: https://github.com/grampus-whcz/TRAC-RCA/tree/main/jsonl
-> Private postmortems (processed by LLM) are also available at: https://github.com/grampus-whcz/TRAC-RCA/tree/main/jsonl
+> Public postmortems (processed by LLM) and Private postmortems (processed by LLM) are both available at: https://github.com/grampus-whcz/TRAC-RCA/tree/main/jsonl
 
 ### Faiss Indices
 
 The knowledge base indices for the hybrid library, public library, and private library have been uploaded to the repository:
 
-> Hybrid library index: https://github.com/grampus-whcz/TRAC-RCA/tree/main/faiss_index_postmortem
-> Public library index: https://github.com/grampus-whcz/TRAC-RCA/tree/main/faiss_index_postmortem_public
-> Private library index: https://github.com/grampus-whcz/TRAC-RCA/tree/main/faiss_index_postmortem_private
+> Hybrid library index is in ./faiss_index_postmortem; Public library index is in ./faiss_index_postmortem_public; and Private library indexis in ./faiss_index_postmortem_private.
 
 ## 5.some tips
 
