@@ -89,7 +89,18 @@ The generated results and monitor files can be found in a new `test` directory c
 
 You can also generate log file like those in experiments folder, and use two scripts (5.extract_all_key_info.py and 8.get_all_result_from_tasks_info_all_task_type.py) to get the statistical results.
 
-## 4.some tips
+## 4.Postmortem corpora
+
+Processed Postmortem Data (JSON format): The processed JSON files for both public and private postmortems have been uploaded to the /jsonl directory within the repository. Specifically:
+Public postmortems (processed by LLM) are available at: https://github.com/grampus-whcz/TRAC-RCA/tree/main/jsonl
+Private postmortems (processed by LLM) are also available at: https://github.com/grampus-whcz/TRAC-RCA/tree/main/jsonl
+
+Faiss Indices: The knowledge base indices for the hybrid library, public library, and private library have been uploaded to the repository:
+Hybrid library index: https://github.com/grampus-whcz/TRAC-RCA/tree/main/faiss_index_postmortem
+Public library index: https://github.com/grampus-whcz/TRAC-RCA/tree/main/faiss_index_postmortem_public
+Private library index: https://github.com/grampus-whcz/TRAC-RCA/tree/main/faiss_index_postmortem_private
+
+## 5.some tips
 
 ### Method 1: Quickly load pkl
 
@@ -103,12 +114,12 @@ python -c "import pickle; data=pickle.load(open('index.pkl','rb')); print(f'Numb
 python -c "import faiss; idx=faiss.read_index('index.faiss'); print(f'Number of records: {idx.ntotal}')"
 ```
 
-## 5.copy framework
+## 6.copy framework
 
 1. cp -r /root/shared-nvme/work/agent/OpenRCA XXX
-2. replace "OmniTransfer_new" with a "OmniTransfer_new?", exclude files like "_.md, _.log, _.txt, _.json, \*.ipynb"
+2. replace "OmniTransfer*new" with a "OmniTransfer_new?", exclude files like "*.md, _.log, _.txt, \_.json, \*.ipynb"
 
-## 6.Omnitransfer
+## 7.Omnitransfer
 
 We have released a runnable version of OmniTransfer in our environment for researchers to download and use.
 The repository link is https://github.com/grampus-whcz/OmniTransfer.
